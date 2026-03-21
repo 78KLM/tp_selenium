@@ -5,10 +5,15 @@ on:
     branches:
       - main
 
-jobs:
+permissions:
+  contents: read
+  packages: write
 
+jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
