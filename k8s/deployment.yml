@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: boutique
-          image: ghcr.io/78klm/boutique:latest
+          image: nginx:1.25
           ports:
             - containerPort: 8080
           envFrom:
